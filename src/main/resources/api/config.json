@@ -1,0 +1,10 @@
+{
+  "developerName": "Eva Magali Capecci",
+  "developerEmail": "magalicapecci@gmail.com",
+  "apiPackage": "com.mcapecci.similarproducts.api",
+  "modelPackage": "com.mcapecci.similarproducts.model",
+  "useBeanValidation": true,
+  "interfaceOnly": true,
+  "useOptional": true,
+  "library": "spring-boot"
+}
