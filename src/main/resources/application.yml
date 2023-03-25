@@ -16,3 +16,10 @@ logging:
   level:
     org.springframework.web: INFO
     org.hibernate: ERROR
+
+api:
+  client:
+    product:
+      base-url: http://localhost:3001
+      getSimilarProductIds: /product/{productId}/similarids
+      getProductById: /product/{productId}
