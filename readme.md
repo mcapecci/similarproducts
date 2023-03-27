@@ -2,6 +2,7 @@
 
 **similarproducts** is a Spring boot application that exposes the agreed REST API on port 5000.
 
+### Option 1:
 Create docker image for similarproducts application
 ```
 docker build -t similarproducts .
@@ -11,7 +12,18 @@ Run **similarproducts** image
 docker run --name container-similarproducts --publish 5000:5000 similarproducts
 ```
 
-# Test and Mocks
+### Option 2:
+Update file https://github.com/dalogax/backendDevTest/docker-compose.yml with the following code
+```
+services:
+    ...
+    similarproducts:
+        image : mcapecci/similarproducts:latest
+        ports:
+            - "5000:5000"
+```
+
+### Test and Mocks
 Download https://github.com/dalogax/backendDevTest
 
 Enable file sharing for the `shared` folder on your docker dashboard -> settings -> resources -> file sharing.
