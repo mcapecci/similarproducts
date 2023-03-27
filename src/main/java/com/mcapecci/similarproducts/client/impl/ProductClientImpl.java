@@ -56,14 +56,14 @@ public class ProductClientImpl implements IProductClient<ProductDetail> {
                     final String msg = String.format("Executing endpoint %s with productId %s and status code %s", url,
                             id, clientResponse.statusCode());
                     log.error(msg);
-//                    return Mono.empty();
-                    return Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND, HttpStatus.NOT_FOUND.getReasonPhrase()));
+                    return Mono.empty();
+//                    return Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND, HttpStatus.NOT_FOUND.getReasonPhrase()));
                 }).onStatus(HttpStatus::is5xxServerError, clientResponse -> {
                     final String msg = String.format("Executing endpoint %s with productId %s and status code %s", url,
                             id, clientResponse.statusCode());
                     log.error(msg);
-//                    return Mono.empty();
-                    return Mono.error(new ResponseStatusException(HttpStatus.SERVICE_UNAVAILABLE, HttpStatus.SERVICE_UNAVAILABLE.getReasonPhrase()));
+                    return Mono.empty();
+//                    return Mono.error(new ResponseStatusException(HttpStatus.SERVICE_UNAVAILABLE, HttpStatus.SERVICE_UNAVAILABLE.getReasonPhrase()));
                 }).bodyToMono(ProductDetail.class);
         return response.block();
     }

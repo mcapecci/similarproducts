@@ -20,6 +20,7 @@ logging:
 api:
   client:
     product:
-      base-url: http://localhost:3001
+#      base-url: http://localhost:3001
+      base-url: http://host.docker.internal:3001
       getSimilarProductIds: /product/{productId}/similarids
       getProductById: /product/{productId}
