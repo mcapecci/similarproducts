@@ -90,7 +90,7 @@
 							<goal>repackage</goal>
 						</goals>
 						<configuration>
-							<mainClass>com.mcapecci.similarproducts.SimilarproductsApplicationApplication</mainClass>
+							<mainClass>com.mcapecci.similarproducts.SimilarproductsApplication</mainClass>
 						</configuration>
 					</execution>
 				</executions>
